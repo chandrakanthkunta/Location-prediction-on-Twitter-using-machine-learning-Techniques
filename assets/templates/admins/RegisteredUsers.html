@@ -1,0 +1,63 @@
+{%extends 'admins/adminbase.html'%}
+{%load static%}
+{%block contents%}
+    <div class="testimonial-area testimonial-padding" data-background="{%static 'img/gallery/section_bg04.jpg'%}">
+        <div class="container ">
+            <div class="row d-flex justify-content-center">
+                <div class="col-xl-10 col-lg-10 col-md-9">
+                    <div class="h1-testimonial-active">
+                        <!-- Single Testimonial -->
+                        <div class="single-testimonial text-center">
+                            <!-- Testimonial Content -->
+
+
+                                   <h1><font color="WHITE"> Activate Registered users</font></h1>
+
+                                         <table border="2px" class="table table-hover table-dark">
+                    <thead>
+                    <tr class="table-danger">
+                        <th scope="col">S.No</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Login ID</th>
+                        <th scope="col">Mobile</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Locality</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Activate</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for i in data %}
+                    <tr scope="row" style="color: BLUE; background-color:#FFFCBB">
+                        <td>{{forloop.counter}}</td>
+                        <td>{{i.name}}</td>
+                        <td>{{i.loginid}}</td>
+                        <td>{{i.mobile}}</td>
+                        <td>{{i.email}}</td>
+                        <td>{{i.locality}}</td>
+                        <td>{{i.status}}</td>
+
+                        {% if i.status == 'waiting' %}
+                        <td><a class="btn-link" href="/AdminActivaUsers/?uid={{ i.id }}"
+                               style="color:DARKBLUE">Activate</a></td>
+                        {% else %}
+                        <td> Activated</td>
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+
+
+                    </tbody>
+                </table>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{%endblock%}

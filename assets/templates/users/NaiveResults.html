@@ -1,0 +1,78 @@
+{%extends 'users/userbase.html'%}
+{%load static%}
+{%block contents%}
+
+        <div class="categories-area section-padding30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle mb-70">
+                            <span>Using Naive Bayes</span>
+                            <h2>Our Best Results</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-cat text-center mb-50">
+                            <div class="cat-icon">
+                                <span class="flaticon-development"></span>
+                            </div>
+                            <div class="cat-cap">
+                                <h5>Accuracy </h5>
+                                <p>{{accuracy}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-cat text-center mb-50">
+                            <div class="cat-icon">
+                                <span class="flaticon-result"></span>
+                            </div>
+                            <div class="cat-cap">
+                                <h5>Mean Absolute Error</h5>
+                                <p>{{mae}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-cat text-center mb-50">
+                            <div class="cat-icon">
+                                <span class="flaticon-team"></span>
+                            </div>
+                            <div class="cat-cap">
+                                <h5>Mean Square Error</h5>
+                                <p>{{mse}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-cat text-center mb-50">
+                            <div class="cat-icon">
+                                <span class="flaticon-result"></span>
+                            </div>
+                            <div class="cat-cap">
+                                <h5>Root Mean Square Error</h5>
+                                <p>{{rmse}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-cat text-center mb-50">
+                            <div class="cat-icon">
+                                <span class="flaticon-team"></span>
+                            </div>
+                            <div class="cat-cap">
+                                <h5>R_Squared</h5>
+                                <p>{{r_squared}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+{%endblock%}

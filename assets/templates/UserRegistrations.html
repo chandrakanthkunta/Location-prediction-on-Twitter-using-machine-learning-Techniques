@@ -1,0 +1,90 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block contents%}
+    <div class="testimonial-area testimonial-padding" data-background="{%static 'img/gallery/section_bg04.jpg'%}">
+        <div class="container ">
+            <div class="row d-flex justify-content-center">
+                <div class="col-xl-10 col-lg-10 col-md-9">
+                    <div class="h1-testimonial-active">
+                        <!-- Single Testimonial -->
+                        <div class="single-testimonial text-center">
+                            <!-- Testimonial Content -->
+                            <div class="testimonial-caption ">
+                                <div class="testimonial-top-cap">
+                                    <center>
+                                        <form action="{%url 'UserRegisterActions'%}" method="POST" class="text-primary" style="width:100%">
+                                            <h1><font color="WHITE">User Registration form  </font></h1>
+                    {% csrf_token %}
+                    <table>
+                        <tr><td></td>
+                            <td class="text-primary">Customer Name</td>
+                            <td>{{form.name}}</td>
+                        </tr>
+                        <tr><td></td>
+                            <td>Login ID</td>
+                            <td>{{form.loginid}}</td>
+                        </tr>
+                        <tr><td></td>
+                            <td>Password</td>
+                            <td>{{form.password}}</td>
+                        </tr>
+                        <tr><td></td>
+                            <td>Mobile</td>
+                            <td>{{form.mobile}}</td>
+                        </tr>
+                        <tr><td></td>
+                            <td>email</td>
+                            <td>{{form.email}}</td>
+                        </tr>
+                        <tr><td></td>
+                            <td>Locality</td>
+                            <td>{{form.locality}}</td>
+                        </tr>
+                        <tr><td></td>
+                            <td>Address</td>
+                            <td>{{form.address}}</td>
+                        </tr>
+                        <tr><td></td>
+                            <td>City</td>
+                            <td>{{form.city}}</td>
+                        </tr>
+                        <tr><td></td>
+                            <td>State</td>
+                            <td>{{form.state}}</td>
+                        </tr>
+                        <tr><td></td>
+                            <td></td>
+                            <td>{{form.status}}</td>
+                        </tr>
+ <tr><td></td>
+                            <td></td>
+     <td><button type="submit" value="Register" class="button button-contactForm boxed-btn">Register</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group mt-3">
+                                <span  >&nbsp;</span>
+                            </div>
+                            </td>
+                        </tr>
+
+                        {% if messages %}
+                        {% for message in messages %}
+                        <font color='GREEN'> {{ message }}</font>
+                        {% endfor %}
+                        {% endif %}
+
+                    </table>
+
+                </form></center>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{%endblock%}

@@ -1,0 +1,46 @@
+{%extends 'admins/adminbase.html'%}
+{%load static%}
+{%block contents%}
+    <div class="testimonial-area testimonial-padding" data-background="{%static 'img/gallery/section_bg04.jpg'%}">
+        <div class="container ">
+            <div class="row d-flex justify-content-center">
+
+
+
+
+                                   <h1><font color="WHITE">Admin View Naive Bayes Results</font></h1>
+
+                                         <table border="2px" class="table table-hover table-dark">
+                    <thead>
+                    <tr class="table-danger">
+                        <th scope="col">S.No</th>
+                        <th scope="col">User Name</th>
+                        <th scope="col">Accuracy</th>
+                        <th scope="col">MAE</th>
+                        <th scope="col">MSE</th>
+                        <th scope="col">RMSE</th>
+                        <th scope="col">R_Squared</th>
+                        <th scope="col">Date</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for i in data %}
+                    <tr scope="row" style="color: BLUE; background-color:#FFFCBB">
+                        <td>{{forloop.counter}}</td>
+                        <td>{{i.username}}</td>
+                        <td>{{i.accuracy}}</td>
+                        <td>{{i.mae}}</td>
+                        <td>{{i.mse}}</td>
+                        <td>{{i.rmse}}</td>
+                        <td>{{i.r_squared}}</td>
+                        <td>{{i.cdate}}</td>
+
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{%endblock%}

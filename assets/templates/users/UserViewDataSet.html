@@ -1,0 +1,79 @@
+{%extends 'users/userbase.html'%}
+{%load static%}
+{%block contents%}
+    <div class="testimonial-area testimonial-padding" data-background="{%static 'img/gallery/section_bg04.jpg'%}">
+        <div class="container ">
+            <div class="row d-flex justify-content-center">
+
+                            <font color="WHITE">
+                            <h2>Dataset Views</h2>
+                                      <table class="table table-bordered bg-light text-dark" id="example" cellspacing="0" width="100%">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Tweet ID</th>
+        <th>Name</th>
+        <th>Screen Name</th>
+        <th>Tweet</th>
+        <th>Created At</th>
+        <th>Location</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>User loc</th>
+
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in users %}
+                                            <tr style="color: Black">
+                                                <td>{{forloop.counter}}</td>
+                                                <td>{{i.tweetid}}</td>
+                                                <td>{{i.username}}</td>
+                                                <td>{{i.userscreenname}}</td>
+                                                <td>{{i.tweettext}}</td>
+                                                <td>{{i.createdat}}</td>
+                                                <td>{{i.address}}</td>
+                                                <td>{{i.latitude}}</td>
+                                                <td>{{i.longitude}}</td>
+                                                <td>{{i.userloc}}</td>
+
+                                            </tr>
+                                            {% endfor %}
+
+    </tbody>
+
+  </table>
+{% if users.has_other_pages %}
+  <ul class="pagination">
+    {% if users.has_previous %}
+      <li><a href="?page={{ users.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&laquo;</span></li>
+    {% endif %}
+    {% for i in users.paginator.page_range %}
+      {% if users.number == i %}
+        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if users.has_next %}
+      <li><a href="?page={{ users.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+{% endif %}
+
+
+
+
+
+                            </font>
+
+
+            </div>
+        </div>
+    </div>
+
+{%endblock%}
