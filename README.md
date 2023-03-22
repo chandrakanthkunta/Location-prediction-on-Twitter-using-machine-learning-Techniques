@@ -6,7 +6,6 @@ The proposed framework aims to predict the location of Twitter users from tweet 
 
 The Location Prediction on Twitter using Machine Learning Techniques project works by analyzing tweets and their associated metadata to predict the location of the Twitter users who posted the tweets. The project follows a series of steps to achieve this goal:
 
-::marker
 * Data Collection: The project uses the Twitter API to collect tweets and their associated metadata, such as user location and tweet content.
 
 * Data Preprocessing: The collected data is preprocessed to remove noise and unwanted information. This involves cleaning and tokenizing the tweets and removing any irrelevant information.
