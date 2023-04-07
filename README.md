@@ -23,11 +23,14 @@ Overall, the Location Prediction on Twitter using Machine Learning Techniques pr
 ## Getting started](#get-started)
 your explanation...
 
+
 ## [Contributing](#contributing)
 your explanation...
 
+
 ## [Core team](#core-team)
 your explanation...
+
 
 ## [License](#license)
 your explanation...
