@@ -1,5 +1,7 @@
 # Location prediction on Twitter using machine learning Techniques
 
+This project uses machine learning techniques to predict the location of tweets posted on Twitter. The goal is to identify the location of users based on the content of their tweets, which can be useful for a variety of applications, including targeted advertising, social media analytics, and emergency response.
+
 ### Installation
 To install the project, simply clone the repository and install the required dependencies using pip:
 
