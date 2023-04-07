@@ -1,6 +1,6 @@
 # Location prediction on Twitter using machine learning Techniques
 
-###Installation
+### Installation
 To install the project, simply clone the repository and install the required dependencies using pip:
 
 git clone https://github.com/yourusername/Location-prediction-on-Twitter-using-machine-learning-Techniques.git
