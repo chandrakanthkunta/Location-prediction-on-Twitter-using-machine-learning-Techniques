@@ -3,7 +3,7 @@
 ### Installation
 To install the project, simply clone the repository and install the required dependencies using pip:
 
-git clone https://github.com/chandrakanthkunta/Location-prediction-on-Twitter-using-machine-learning-Techniques
+git clone https://github.com/chandrakanthkunta/Location-prediction-on-Twitter-using-machine-learning-Techniques.git
 
 cd Location-prediction-on-Twitter-using-machine-learning-Techniques
 
