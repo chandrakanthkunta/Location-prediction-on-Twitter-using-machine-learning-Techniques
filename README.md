@@ -19,4 +19,15 @@ The Location Prediction on Twitter using Machine Learning Techniques project wor
 * Model Deployment: The trained model is deployed to predict the location of new tweets. When a new tweet is received, the model uses its learned associations between features and locations to predict the location of the Twitter user who posted the tweet.
 
 Overall, the Location Prediction on Twitter using Machine Learning Techniques project works by leveraging machine learning algorithms and techniques to analyze tweets and their associated metadata to predict the location of Twitter users. By uploading the project to GitHub, other researchers and developers can access and build on the project to further advance the field of location prediction on social media platforms.
-![image](https://user-images.githubusercontent.com/39990885/230680998-fcd3d190-5f92-493b-9d96-5fd33f28a0f4.png)
+
+## Getting started](#get-started)
+your explanation...
+
+## [Contributing](#contributing)
+your explanation...
+
+## [Core team](#core-team)
+your explanation...
+
+## [License](#license)
+your explanation...
